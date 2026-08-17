@@ -8,9 +8,6 @@ hero:
   name: Unity 学习笔记
   text: 个人游戏客户端开发知识库
   tagline: C# 编程 · Unity 引擎 · 工程实践 — 面向游戏客户端开发者
-  image:
-    src: /logo.png
-    alt: Unity
   actions:
     - theme: brand
       text: 📖 开始阅读
