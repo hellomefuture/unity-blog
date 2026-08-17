@@ -1,8 +1,12 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  // ⚠️这里！！仓库名字 unity‑blog，前后斜杠不能少！！
+  base: '/unity-blog/',
+
   title: "Unity学习笔记",
-  description: "个人Unity客户端学习博客 | C# | YooAsset | HybridCLR | PureMVC",
+  description: "个人Unity技术知识库",
+  // ...剩下你的原有配置不要改动
 
   // 强制暗色模式
   appearance: true,
