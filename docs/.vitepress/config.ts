@@ -8,6 +8,8 @@ export default defineConfig({
   description: '个人 Unity + C# 游戏开发知识库 | 面向游戏客户端开发者',
   lastUpdated: true,
 
+  appearance: 'dark',
+
   markdown: {
     lineNumbers: true,
     // @ts-ignore — VitePress 1.6.x 支持
