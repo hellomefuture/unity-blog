@@ -40,7 +40,6 @@
 
 .vp-doc div[class*='language-'] {
   border-radius: 12px !important;
-  padding: 4px 0 !important;
   border: 1px solid var(--vp-c-border) !important;
   background: var(--vp-code-block-bg) !important;
 }
@@ -58,11 +57,7 @@
   font-size: 0.85em !important;
 }
 
-.vp-doc .line-numbers-wrapper {
-  border-right: 1px solid var(--vp-c-border) !important;
-  color: var(--vp-c-text-3) !important;
-  padding: 4px 0 !important;
-}
+/* 行号：保持默认定位，只改颜色边框 */
 
 /* ==================== 4. 侧边栏 ==================== */
 
