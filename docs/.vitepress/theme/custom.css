@@ -17,19 +17,9 @@
   --vp-home-hero-image-background-image: linear-gradient(135deg, #1e1b4b 0%, #2e1065 40%, #4c1d95 100%);
 }
 
-/* ==================== 2. Features 卡片 ==================== */
+/* ==================== 2. Features 卡片美化 ==================== */
 
-.VPHomeFeatures .items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .VPHomeFeatures .items {
-    grid-template-columns: 1fr;
-  }
-}
+/* 保留默认 flex 布局，仅美化卡片外观 */
 
 .VPFeature {
   border: 1px solid var(--vp-c-border);
