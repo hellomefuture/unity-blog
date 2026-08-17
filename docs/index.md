@@ -1,47 +1,46 @@
 ---
-layout: page
+layout: home
+
+title: Unity 学习笔记
+titleTemplate: 个人 Unity + C# 游戏开发知识库
+
+hero:
+  name: Unity 学习笔记
+  text: 个人游戏客户端开发知识库
+  tagline: C# 编程 · Unity 引擎 · 工程实践 — 面向游戏客户端开发者
+  image:
+    src: /logo.png
+    alt: Unity
+  actions:
+    - theme: brand
+      text: 📖 开始阅读
+      link: /CSharp/complete
+    - theme: alt
+      text: ⭐ GitHub 仓库
+      link: https://github.com/hellomefuture/unity-blog
+
+features:
+  - icon: 📘
+    title: C# 编程
+    details: 从基础语法到泛型集合、委托事件、LINQ 查询、异步编程，系统掌握 C# 核心知识，配套练习与批改。
+  - icon: 🎮
+    title: Unity 引擎
+    details: MonoBehaviour 生命周期、UGUI 布局、资源管理、框架架构，覆盖 Unity 游戏开发常用技术栈。
+  - icon: 🏗️
+    title: 工程实践
+    details: PureMVC 框架解析、代码架构设计、性能优化思路，积累游戏客户端工程落地经验。
+
 ---
 
-<div class="home-card-grid">
-
-  <!-- C# 完全指南 -->
-  <div class="home-card">
-    <div class="home-card-header">
-      <span class="home-card-icon">📘</span>
-      <h2 class="home-card-title">C# 知识完全指南</h2>
-    </div>
-    <p class="home-card-desc">从入门到进阶，变量/常量/类型转换/异常/集合/泛型/委托/事件/LINQ/async等全覆盖</p>
-    <ul class="home-card-links">
-      <li><a href="/unity-blog/CSharp/complete">C# 完全指南（完整版）</a></li>
-      <li><a href="/unity-blog/CSharp/variables">变量、常量与类型转换</a></li>
-      <li><a href="/unity-blog/CSharp/reflect">反射</a></li>
-      <li><a href="/unity-blog/CSharp/delegate">委托与 UnityEvent</a></li>
-    </ul>
-  </div>
-
-  <!-- Unity 基础 -->
-  <div class="home-card">
-    <div class="home-card-header">
-      <span class="home-card-icon">🎮</span>
-      <h2 class="home-card-title">Unity 基础</h2>
-    </div>
-    <p class="home-card-desc">MonoBehaviour 生命周期、UGUI 基础组件与布局</p>
-    <ul class="home-card-links">
-      <li><a href="/unity-blog/UnityBase/lifeCycle">Mono 生命周期</a></li>
-      <li><a href="/unity-blog/UnityBase/ugui">UGUI</a></li>
-    </ul>
-  </div>
-
-  <!-- 框架架构 -->
-  <div class="home-card">
-    <div class="home-card-header">
-      <span class="home-card-icon">🏗️</span>
-      <h2 class="home-card-title">框架架构</h2>
-    </div>
-    <p class="home-card-desc">PureMVC 轻量级 MVC 框架在 Unity 中的应用</p>
-    <ul class="home-card-links">
-      <li><a href="/unity-blog/Framework/puremvc">PureMVC 框架</a></li>
-    </ul>
-  </div>
-
+<div class="home-footer">
+  <p>基于 VitePress 构建 | 面向游戏客户端开发者</p>
 </div>
+
+<style>
+.home-footer {
+  text-align: center;
+  padding: 48px 24px 24px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+</style>
