@@ -19,7 +19,7 @@ export default defineConfig({
     // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'C#编程', link: '/CSharp/variables' },
+      { text: 'C#编程', link: '/CSharp/complete' },
       { text: 'Unity开发', link: '/UnityBase/lifeCycle' },
       { text: '框架架构', link: '/Framework/puremvc' }
     ],
