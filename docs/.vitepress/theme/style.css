@@ -1,54 +1,40 @@
 /* ============================================================
    YouTube 风格主题 — Unity 学习笔记博客
-   支持黑夜/白天切换（默认跟随系统，按钮可切换）
    ============================================================ */
 
 /* ==================== 1. 全局 CSS 变量 ==================== */
 
-/* --- 亮色模式（默认） --- */
 :root {
-  /* 背景 */
   --vp-c-bg: #ffffff;
   --vp-c-bg-alt: #f6f6f7;
   --vp-c-bg-elv: #ffffff;
   --vp-c-bg-soft: #f6f6f7;
 
-  /* 文字 */
   --vp-c-text-1: #0f0f0f;
   --vp-c-text-2: #606060;
   --vp-c-text-3: #909090;
 
-  /* 边框 */
   --vp-c-border: #d9d9d9;
   --vp-c-divider: #e5e5e5;
   --vp-c-gutter: #e5e5e5;
 
-  /* 品牌色 */
   --vp-c-brand-1: #6c63ff;
   --vp-c-brand-2: #5a52d5;
   --vp-c-brand-3: #4a42b8;
   --vp-c-brand-soft: rgba(108, 99, 255, 0.10);
 
-  /* 导航栏 */
   --vp-nav-height: 56px;
   --vp-nav-bg-color: #ffffff;
 
-  /* 侧边栏 */
-  --vp-sidebar-width: 240px;
-  --vp-sidebar-bg-color: #ffffff;
-
-  /* 代码块 */
   --vp-code-block-bg: #f8f8f8;
   --vp-code-block-color: #333;
   --vp-code-bg: rgba(108, 99, 255, 0.07);
 
-  /* 自定义块 */
   --vp-custom-block-tip-bg: rgba(108, 99, 255, 0.06);
   --vp-custom-block-warning-bg: rgba(255, 179, 0, 0.08);
   --vp-custom-block-danger-bg: rgba(255, 50, 50, 0.08);
 }
 
-/* --- 暗色模式（YouTube 风格） --- */
 .dark {
   --vp-c-bg: #0f0f0f;
   --vp-c-bg-alt: #1a1a1a;
@@ -69,7 +55,6 @@
   --vp-c-brand-soft: rgba(108, 99, 255, 0.15);
 
   --vp-nav-bg-color: #0f0f0f;
-  --vp-sidebar-bg-color: #0f0f0f;
 
   --vp-code-block-bg: #1e1e1e;
   --vp-code-block-color: #d4d4d4;
@@ -94,7 +79,6 @@
 .VPNavBar { background: var(--vp-nav-bg-color) !important; }
 .VPNavBar .container { max-width: 100% !important; padding: 0 16px !important; }
 
-/* 标题/Logo */
 .VPNavBarTitle { flex: 0 0 auto !important; }
 .VPNavBarTitle .title {
   font-size: 18px !important;
@@ -103,7 +87,6 @@
   letter-spacing: 0.5px;
 }
 
-/* 导航菜单 — 居中 */
 .VPNavBarMenu { flex: 1 !important; justify-content: center !important; gap: 4px !important; }
 .VPNavBarMenu .link {
   font-size: 14px !important; font-weight: 500 !important;
@@ -120,73 +103,12 @@
   background: var(--vp-c-brand-soft) !important;
 }
 
-/* 搜索框 */
 .VPNavBarSearch { flex: 0 0 auto !important; max-width: 300px !important; }
-.VPNavBarSearch .DocSearch-Button {
-  border-radius: 20px !important; height: 36px !important;
-  padding: 0 16px !important; transition: all 0.2s ease !important;
-  background: var(--vp-c-bg-soft) !important;
-  border: 1px solid var(--vp-c-border) !important;
-}
-.VPNavBarSearch .DocSearch-Button:hover {
-  border-color: var(--vp-c-text-3) !important;
-  background: var(--vp-c-bg-elv) !important;
-}
-.VPNavBarSearch .DocSearch-Search-Icon { color: var(--vp-c-text-3) !important; width: 16px !important; height: 16px !important; }
-.VPNavBarSearch .DocSearch-Button-Placeholder {
-  font-size: 14px !important;
-  color: var(--vp-c-text-3) !important;
-  padding-left: 8px !important;
-}
-
-/* 右侧图标 */
 .VPNavBarExtra { flex: 0 0 auto !important; gap: 8px !important; }
-
-/* 切换按钮 */
 .VPNavBarAppearance .VPSwitch { border: 1px solid var(--vp-c-border) !important; }
 
-/* GitHub 社交图标 */
-.VPSocialLinks .social-link-icon { color: var(--vp-c-text-2) !important; transition: color 0.2s; }
-.VPSocialLinks .social-link-icon:hover { color: var(--vp-c-brand-1) !important; }
+/* ==================== 4. 首页卡片网格 ==================== */
 
-/* ==================== 4. 侧边栏 ==================== */
-
-.VPSidebar {
-  padding-top: 8px !important;
-  background: var(--vp-sidebar-bg-color) !important;
-  border-right: 1px solid var(--vp-c-border) !important;
-}
-
-/* 组标题 */
-.VPSidebarGroup .title {
-  font-size: 12px !important; font-weight: 600 !important;
-  text-transform: uppercase !important; letter-spacing: 0.8px !important;
-  color: var(--vp-c-text-3) !important;
-  padding: 8px 12px 4px !important;
-}
-
-/* 侧边栏选项 */
-.VPSidebarItem .link {
-  padding: 6px 12px !important; border-radius: 8px !important;
-  margin: 1px 8px !important; font-size: 14px !important;
-  color: var(--vp-c-text-2) !important;
-  transition: all 0.15s ease !important;
-}
-.VPSidebarItem .link:hover {
-  color: var(--vp-c-text-1) !important;
-  background: rgba(128, 128, 128, 0.12) !important;
-}
-.VPSidebarItem.is-active .link {
-  color: var(--vp-c-brand-1) !important;
-  background: var(--vp-c-brand-soft) !important;
-  font-weight: 500 !important;
-}
-.VPSidebarItem .caret { color: var(--vp-c-text-3) !important; }
-
-/* ==================== 5. 主页卡片网格 ==================== */
-
-/* 隐藏默认 hero 区域（page 布局已处理，额外保险） */
-.VPHome { padding-bottom: 0 !important; }
 .home-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -194,7 +116,6 @@
   max-width: 1200px; margin: 0 auto;
 }
 
-/* 卡片 — 亮色 */
 .home-card {
   background: var(--vp-c-bg-elv);
   border: 1px solid var(--vp-c-border);
@@ -207,7 +128,6 @@
   box-shadow: var(--vp-shadow-2);
 }
 
-/* 卡片标题行 */
 .home-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
 .home-card-icon { font-size: 28px; line-height: 1; flex-shrink: 0; }
 .home-card-title {
@@ -219,7 +139,6 @@
   line-height: 1.5; margin-bottom: 16px;
 }
 
-/* 卡片内链接 */
 .home-card-links { list-style: none; padding: 0; margin: 0; }
 .home-card-links li { margin: 6px 0; }
 .home-card-links a {
@@ -232,11 +151,10 @@
   color: var(--vp-c-brand-1); background: var(--vp-c-brand-soft);
 }
 
-/* ==================== 6. 文章页面 ==================== */
+/* ==================== 5. 文章页面 ==================== */
 
-.VPDoc .content-container { max-width: 860px !important; }
+.VPDoc:not(.has-sidebar) .content-container { max-width: 860px !important; }
 
-/* 标题 */
 .VPDoc h1 {
   font-size: 28px !important; font-weight: 700 !important;
   color: var(--vp-c-text-1) !important;
@@ -252,7 +170,6 @@
   color: var(--vp-c-text-1) !important; margin-top: 24px;
 }
 
-/* 代码块 */
 .vp-doc div[class*='language-'] {
   border-radius: 10px !important;
   border: 1px solid var(--vp-c-border) !important;
@@ -265,7 +182,6 @@
   font-size: 0.85em !important;
 }
 
-/* 表格 */
 .vp-doc table {
   border-collapse: separate; border-spacing: 0;
   border-radius: 10px; overflow: hidden;
@@ -280,24 +196,21 @@
 .vp-doc td { border-bottom: 1px solid var(--vp-c-divider) !important; }
 .vp-doc tr:last-child td { border-bottom: none !important; }
 
-/* 提示块 */
 .vp-doc .custom-block { border-radius: 10px !important; border-left: 4px solid var(--vp-c-brand-1) !important; }
 .vp-doc .custom-block.tip { background: var(--vp-custom-block-tip-bg) !important; }
 .vp-doc .custom-block.warning { background: var(--vp-custom-block-warning-bg) !important; border-left-color: #ffb300 !important; }
 .vp-doc .custom-block.danger { background: var(--vp-custom-block-danger-bg) !important; border-left-color: #ff3232 !important; }
 
-/* 行号 */
 .vp-doc .line-numbers-wrapper {
   border-right: 1px solid var(--vp-c-border) !important;
   color: var(--vp-c-text-3) !important;
 }
 
-/* ==================== 7. 移动端适配 ==================== */
+/* ==================== 6. 移动端适配 ==================== */
 
 @media (max-width: 960px) {
   .VPNavBarSearch { max-width: 180px !important; }
   .VPNavBarMenu { display: none !important; }
-  .VPSidebar { padding-top: 0 !important; }
 }
 @media (max-width: 640px) {
   .VPNavBarSearch { max-width: 120px !important; }
