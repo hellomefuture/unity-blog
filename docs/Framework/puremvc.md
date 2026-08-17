@@ -1,3 +1,4 @@
+# PureMVC框架详解
 ## 文档简介
 PureMVC 是一款**跨平台、轻量级 MVC 标准化程序框架**，最早为 Flex/ActionScript 设计，现已支持 C#、JS、Python 等多语言，广泛用于 Unity 手游、客户端管理系统。 核心设计：通过 `Proxy/Mediator/Command/Facade` 分层 + 观察者消息总线实现模块高度解耦，适合中大型长线游戏 / 富客户端项目。
 
