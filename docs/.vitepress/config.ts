@@ -64,6 +64,7 @@ export default defineConfig({
         text: 'Unity开发',
         items: [
           { text: '🔄 Mono生命周期', link: '/UnityBase/lifeCycle' },
+          { text: '🔄 内存泄露', link: '/UnityBase/内存泄露' },
           { text: '🖥️ UGUI',         link: '/UnityBase/ugui' }
         ]
       },
@@ -107,6 +108,7 @@ export default defineConfig({
           base: '/UnityBase/',
           items: [
             { text: '🔄 Mono生命周期', link: 'lifeCycle' },
+            { text: '🔄 内存泄露', link: '内存泄露' },
             { text: '🖥️ UGUI',         link: 'ugui' }
           ]
         }
