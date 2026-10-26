@@ -36,6 +36,72 @@
   border-color: var(--vp-c-brand-1);
 }
 
+/* ==================== 2.1 可点击的自定义卡片（首页） ==================== */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1152px;
+  margin: 8px auto 0;
+  padding: 24px 24px 0;
+  box-sizing: border-box;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  background: var(--vp-c-bg-elv);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(108, 99, 255, 0.12);
+  border-color: var(--vp-c-brand-1);
+}
+
+.feature-icon {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.feature-card .feature-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  border-bottom: none !important;
+  color: var(--vp-c-text-1);
+}
+
+.feature-card .feature-details {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+  margin: 0 0 14px !important;
+  flex: 1;
+}
+
+.feature-more {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  transition: opacity 0.2s ease;
+}
+
+.feature-card:hover .feature-more {
+  opacity: 0.75;
+}
+
 /* ==================== 3. 代码块美化 ==================== */
 
 .vp-doc div[class*='language-'] {
