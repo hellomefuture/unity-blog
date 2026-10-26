@@ -65,15 +65,25 @@ export default defineConfig({
         items: [
           { text: '🔄 Mono生命周期', link: '/UnityBase/lifeCycle' },
           { text: '🔄 内存泄露', link: '/UnityBase/内存泄露' },
-          { text: '🖥️ UGUI',         link: '/UnityBase/ugui' }
+          { text: '🖥️ UGUI',         link: '/UnityBase/ugui' },
+          { text: '⚡ DrawCall与合批', link: '/UnityBase/drawcall' },
+          { text: '📜 虚拟列表',       link: '/UnityBase/virtuallist' }
+        ]
+      },
+      {
+        text: '框架架构',
+        items: [
+          { text: '🏗️ PureMVC',          link: '/Framework/puremvc' },
+          { text: '🔥 HybridCLR 热更新', link: '/Framework/hybridclr' },
+          { text: '📦 YooAsset 资源',    link: '/Framework/yooasset' },
+          { text: '🔁 通用状态机',        link: '/Framework/fsm' }
         ]
       },
       {
         text: '更多',
         items: [
-          { text: '🏗️ 框架架构',      link: '/Framework/puremvc' },
-          { text: '📦 GitHub仓库',    link: 'https://github.com/hellomefuture/unity-blog' },
-          { text: '📖 关于本站',      link: '/about' }
+          { text: '👤 关于本站',      link: '/about' },
+          { text: '📦 GitHub仓库',    link: 'https://github.com/hellomefuture/unity-blog' }
         ]
       }
     ],
@@ -109,7 +119,9 @@ export default defineConfig({
           items: [
             { text: '🔄 Mono生命周期', link: 'lifeCycle' },
             { text: '🔄 内存泄露', link: '内存泄露' },
-            { text: '🖥️ UGUI',         link: 'ugui' }
+            { text: '🖥️ UGUI',         link: 'ugui' },
+            { text: '⚡ DrawCall与合批', link: 'drawcall' },
+            { text: '📜 虚拟列表',       link: 'virtuallist' }
           ]
         }
       ],
@@ -118,7 +130,10 @@ export default defineConfig({
           text: '框架架构',
           base: '/Framework/',
           items: [
-            { text: '🏗️ PureMVC', link: 'puremvc' }
+            { text: '🏗️ PureMVC',          link: 'puremvc' },
+            { text: '🔥 HybridCLR 热更新', link: 'hybridclr' },
+            { text: '📦 YooAsset 资源',    link: 'yooasset' },
+            { text: '🔁 通用状态机',        link: 'fsm' }
           ]
         }
       ]

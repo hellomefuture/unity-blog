@@ -7,7 +7,7 @@ titleTemplate: 个人 Unity + C# 游戏开发知识库
 hero:
   name: Unity 学习笔记
   text: 个人游戏客户端开发知识库
-  tagline: C# 编程 · Unity 引擎 · 工程实践 — 面向游戏客户端开发者
+  tagline: C# 编程 · Unity 引擎 · 热更新与性能优化 — 记录项目里真实踩过的坑
   image:
     src: /unity_logo_black.png
     alt: Unity
@@ -25,7 +25,10 @@ features:
     details: 从基础语法到泛型集合、委托事件、LINQ 查询、异步编程，系统掌握 C# 核心知识，配套练习与批改。
   - icon: 🎮
     title: Unity 引擎
-    details: MonoBehaviour 生命周期、UGUI 布局、资源管理、框架架构，覆盖 Unity 游戏开发常用技术栈。
+    details: MonoBehaviour 生命周期、UGUI 布局与合批、DrawCall 优化、虚拟列表、资源管理，覆盖客户端开发的常用技术栈。
+  - icon: 🔥
+    title: 热更新与架构
+    details: HybridCLR 双程序集架构、YooAsset 资源框架、模块化注册、EventBus、通用状态机与对象池的落地实践。
   - icon: 🏗️
     title: 工程实践
     details: PureMVC 框架解析、代码架构设计、性能优化思路，积累游戏客户端工程落地经验。
