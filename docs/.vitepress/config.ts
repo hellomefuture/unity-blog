@@ -3,6 +3,29 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: '/unity-blog/',
 
+  // ==================== 访问统计（Umami） ====================
+  /*
+   * 排除自己访问的办法：
+   *   在自己浏览器控制台执行一次 localStorage.setItem('umami-no-track', '1')
+   *   之后这台浏览器的访问不再计入统计；清缓存/换浏览器需要重新设置。
+   *
+   * data-domains 限定只统计正式域名，本地 dev / 预览访问不会上报。
+   */
+  head: [
+    [
+      'script',
+      {},
+      `if (!localStorage.getItem('umami-no-track')) {
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://cloud.umami.is/script.js';
+  s.setAttribute('data-website-id', '9199721c-031a-4078-a0e0-c07247096f67');
+  s.setAttribute('data-domains', 'hellomefuture.github.io');
+  document.head.appendChild(s);
+}`
+    ]
+  ],
+
   lang: 'zh-CN',
   title: 'Unity 学习笔记',
   description: '个人 Unity + C# 游戏开发知识库 | 面向游戏客户端开发者',
