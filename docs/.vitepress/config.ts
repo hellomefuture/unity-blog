@@ -90,22 +90,31 @@ export default defineConfig({
           { text: '🔄 内存泄露', link: '/UnityBase/内存泄露' },
           { text: '🖥️ UGUI',         link: '/UnityBase/ugui' },
           { text: '⚡ DrawCall与合批', link: '/UnityBase/drawcall' },
-          { text: '📜 虚拟列表',       link: '/UnityBase/virtuallist' }
+          { text: '📜 虚拟列表',       link: '/UnityBase/virtuallist' },
+          { text: '💾 数据持久化',     link: '/UnityBase/persistence' },
+          { text: '📦 AB包与AA包',     link: '/UnityBase/assetbundle' },
+          { text: '⚙️ Mono与IL2CPP',   link: '/UnityBase/scripting-backend' },
+          { text: '🧵 线程与Task',     link: '/UnityBase/threading' },
+          { text: '⏳ async/await',    link: '/UnityBase/async-await' },
+          { text: '🌐 TCP/UDP 网络',   link: '/UnityBase/network' },
+          { text: '📊 SO 数据驱动',    link: '/UnityBase/scriptableobject' }
         ]
       },
       {
         text: '框架架构',
         items: [
           { text: '🏗️ PureMVC',          link: '/Framework/puremvc' },
+          { text: '🧩 MVC / MVP / MVVM',  link: '/Framework/mvc-mvp-mvvm' },
+          { text: '🎯 设计模式',          link: '/Framework/design-patterns' },
+          { text: '🔁 通用状态机',        link: '/Framework/fsm' },
           { text: '🔥 HybridCLR 热更新', link: '/Framework/hybridclr' },
-          { text: '📦 YooAsset 资源',    link: '/Framework/yooasset' },
-          { text: '🔁 通用状态机',        link: '/Framework/fsm' }
+          { text: '📦 YooAsset 资源',    link: '/Framework/yooasset' }
         ]
       },
       {
         text: '更多',
         items: [
-          { text: '👤 关于本站',      link: '/about' },
+          { text: '👤 关于本人',      link: '/about' },
           { text: '📦 GitHub仓库',    link: 'https://github.com/hellomefuture/unity-blog' }
         ]
       }
@@ -137,26 +146,59 @@ export default defineConfig({
       ],
       '/UnityBase/': [
         {
-          text: 'Unity 开发',
+          text: 'Unity 基础',
           base: '/UnityBase/',
           items: [
             { text: '🔄 Mono生命周期', link: 'lifeCycle' },
-            { text: '🔄 内存泄露', link: '内存泄露' },
             { text: '🖥️ UGUI',         link: 'ugui' },
+            { text: '🔄 内存泄露', link: '内存泄露' }
+          ]
+        },
+        {
+          text: '性能优化',
+          base: '/UnityBase/',
+          items: [
             { text: '⚡ DrawCall与合批', link: 'drawcall' },
             { text: '📜 虚拟列表',       link: 'virtuallist' }
+          ]
+        },
+        {
+          text: '数据与资源',
+          base: '/UnityBase/',
+          items: [
+            { text: '💾 数据持久化', link: 'persistence' },
+            { text: '📦 AB包与AA包', link: 'assetbundle' },
+            { text: '📊 ScriptableObject 数据驱动', link: 'scriptableobject' }
+          ]
+        },
+        {
+          text: '底层与并发',
+          base: '/UnityBase/',
+          items: [
+            { text: '⚙️ Mono 与 IL2CPP', link: 'scripting-backend' },
+            { text: '🧵 线程、线程池与 Task', link: 'threading' },
+            { text: '⏳ 异步 async/await', link: 'async-await' },
+            { text: '🌐 TCP / UDP 网络', link: 'network' }
           ]
         }
       ],
       '/Framework/': [
         {
-          text: '框架架构',
+          text: '架构模式',
           base: '/Framework/',
           items: [
             { text: '🏗️ PureMVC',          link: 'puremvc' },
-            { text: '🔥 HybridCLR 热更新', link: 'hybridclr' },
-            { text: '📦 YooAsset 资源',    link: 'yooasset' },
+            { text: '🧩 MVC / MVP / MVVM',  link: 'mvc-mvp-mvvm' },
+            { text: '🎯 设计模式',          link: 'design-patterns' },
             { text: '🔁 通用状态机',        link: 'fsm' }
+          ]
+        },
+        {
+          text: '框架实践',
+          base: '/Framework/',
+          items: [
+            { text: '🔥 HybridCLR 热更新', link: 'hybridclr' },
+            { text: '📦 YooAsset 资源',    link: 'yooasset' }
           ]
         }
       ]

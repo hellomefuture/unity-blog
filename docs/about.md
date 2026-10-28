@@ -1,4 +1,4 @@
-# 关于本站
+# 关于本人
 
 ## 一句话介绍
 
@@ -54,6 +54,6 @@ GitHub：[hellomefuture/CryptWalker](https://github.com/hellomefuture/CryptWalke
 
 ---
 
-## 关于本站
+## 关于这个博客
 
 这里记录 Unity 与 C# 的学习笔记和工程实践，内容来自项目中的真实问题与解决过程，而不是单纯抄 API 文档。如果某一篇正好帮到你，欢迎在 GitHub 提 Issue 交流。
