@@ -1,4 +1,4 @@
-name: Deploy VitePress
+name: Deploy Hexo
 
 on:
   push:
@@ -25,15 +25,15 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build site
-        run: npm run build
+        run: npx hexo generate
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/.vitepress/dist
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment

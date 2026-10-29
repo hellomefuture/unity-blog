@@ -1,0 +1,75 @@
+# ==================== Hexo 主配置 ====================
+title: Unity 学习笔记
+subtitle: 'C# 编程 · Unity 引擎 · 热更新与性能优化'
+description: '个人 Unity + C# 游戏开发知识库 | 面向游戏客户端开发者'
+keywords: 'Unity, C#, 游戏开发, 热更新, 性能优化'
+author: 罗庆烽
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# ==================== 部署地址 ====================
+# GitHub Pages 项目页：https://hellomefuture.github.io/unity-blog/
+url: https://hellomefuture.github.io
+root: /unity-blog/
+permalink: posts/:title/
+permalink_defaults:
+
+# 分类路径用英文，避免中文 URL
+category_map:
+  CSharp编程: csharp
+  Unity开发: unity
+  框架架构: framework
+
+# ==================== 目录 ====================
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# ==================== 写作 ====================
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+
+# ==================== 代码高亮 ====================
+# Butterfly 使用自带高亮，关闭 Hexo 原生高亮
+highlight:
+  enable: false
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# ==================== 首页分页 ====================
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+per_page: 10
+pagination_dir: page
+
+# ==================== 主题 ====================
+theme: butterfly
+
+# ==================== 部署 ====================
+deploy:
+  type: git
+  repo: https://github.com/hellomefuture/unity-blog.git
+  branch: gh-pages

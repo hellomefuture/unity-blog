@@ -1,0 +1,280 @@
+# ==================== Butterfly 主题配置 ====================
+# 参考站观感：全屏 Banner + 卡片流 + 右栏信息卡 + 深色毛玻璃
+# 官方文档：https://butterfly.js.org/
+
+# ==================== 导航 ====================
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  C#编程: /categories/csharp/ || fas fa-code
+  Unity开发: /categories/unity/ || fas fa-gamepad
+  框架架构: /categories/framework/ || fas fa-layer-group
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  关于本人: /about/ || fas fa-user
+
+# ==================== 代码块 ====================
+code_blocks:
+  theme: darker
+  macStyle: true
+  height_limit: 400
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
+
+# ==================== 社交 ====================
+social:
+  fab fa-github: https://github.com/hellomefuture || GitHub || '#24292e'
+  fas fa-envelope: mailto:3041520372@qq.com || Email || '#4a7dbe'
+
+# ==================== 图像 ====================
+favicon: /img/avatar.svg
+
+avatar:
+  img: /img/avatar.svg
+  effect: false
+
+disable_top_img: false
+default_top_img: /img/banner.svg
+index_img: /img/banner.svg
+archive_img: /img/banner.svg
+tag_img: /img/banner.svg
+category_img: /img/banner.svg
+
+footer_img: false
+
+# 全站固定背景（SVG 渐变 + 网格，可替换为自己的照片）
+background: url(/img/banner.svg)
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - /img/covers/c1.svg
+    - /img/covers/c2.svg
+    - /img/covers/c3.svg
+    - /img/covers/c4.svg
+    - /img/covers/c5.svg
+    - /img/covers/c6.svg
+
+error_img:
+  flink: /img/covers/c1.svg
+  post_page: /img/covers/c1.svg
+
+# ==================== 文章元信息 ====================
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# ==================== 首页 ====================
+index_site_info_top: 30%
+index_top_img_height: 100vh
+
+subtitle:
+  enable: true
+  effect: true
+  typed_option:
+  source: false
+  sub:
+    - C# / Unity 客户端开发
+    - 热更新 · 资源管理 · 性能优化
+    - 记录项目里真实踩过的坑
+
+# 3 = 左右交替的封面卡片（Butterfly 的招牌布局）
+index_layout: 3
+
+index_post_content:
+  method: 2
+  length: 300
+
+# ==================== 文章页 ====================
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+anchor:
+  auto_update: false
+  click_to_scroll: true
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 150
+
+# 需要 hexo-wordcount 插件
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ==================== 侧边栏 ====================
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: Unity 客户端开发 / 2027 届校招 / 《地穴行者》独立开发者
+    button:
+      enable: true
+      icon: fab fa-github
+      text: GitHub
+      link: https://github.com/hellomefuture
+  card_announcement:
+    enable: true
+    content: '记录 Unity 与 C# 的学习笔记和工程实践，内容来自项目里的真实问题。'
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: true
+    orderby: random
+    order: 1
+  card_archives:
+    enable: true
+    type: monthly
+    format: YYYY年MM月
+    order: -1
+    limit: 8
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    runtime_date: 2025/09/01
+
+# ==================== 右下角按钮 ====================
+rightside_bottom: 30px
+rightside_scroll_percent: true
+readmode: true
+translate:
+  enable: false
+  default: 繁
+  defaultEncoding: 2
+  translateDelay: 0
+  msgToTraditionalChinese: '繁'
+  msgToSimplifiedChinese: '簡'
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+# 默认深色（与参考站的深色卡片一致）
+display_mode: dark
+
+# ==================== 搜索 ====================
+search:
+  use: local_search
+  placeholder: 搜索文章...
+  local_search:
+    preload: true
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: false
+      hitsPerPage: 8
+    CDN:
+
+# ==================== 分享 / 评论 ====================
+share:
+  use: sharejs
+  sharejs:
+    sites: wechat,weibo,qq
+
+comments:
+  use:
+  text: true
+  lazyload: false
+  count: false
+
+# ==================== 统计 ====================
+# 不蒜子：站点访客数 / 总浏览量 / 单页阅读量
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+# Umami 用注入脚本的方式接入（带排除自己 + 域名限制）
+umami_analytics:
+  enable: false
+  serverURL:
+  script_name: script.js
+  website_id:
+  option:
+  UV_PV:
+    site_uv: false
+    site_pv: false
+    page_pv: false
+
+hugurumi:
+  enable: false
+
+# ==================== 页脚 ====================
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2025
+  copyright:
+    enable: true
+    version: false
+  custom_text: '框架 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> | 主题 <a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener">Butterfly</a>'
+
+# ==================== 注入 ====================
+inject:
+  head:
+    # 默认深色 + 排除自己访问（本地开发不统计）
+    - '<script>if(!localStorage.getItem("theme"))localStorage.setItem("theme","dark");</script>'
+    - '<link rel="stylesheet" href="/unity-blog/css/custom.css">'
+    - |
+      <script>
+      if (!localStorage.getItem('umami-no-track') && location.hostname === 'hellomefuture.github.io') {
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://cloud.umami.is/script.js';
+        s.setAttribute('data-website-id', '9199721c-031a-4078-a0e0-c07247096f67');
+        s.setAttribute('data-domains', 'hellomefuture.github.io');
+        document.head.appendChild(s);
+      }
+      </script>
+  bottom:

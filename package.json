@@ -1,14 +1,1 @@
-{
-  "name": "unity-blog",
-  "private": true,
-  "version": "0.0.1",
-  "type": "module",
-  "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
-  },
-  "devDependencies": {
-    "vitepress": "^1.6.3"
-  }
-}
+{"name":"unity-blog-hexo","version":"1.0.0","private":true,"scripts":{"build":"hexo generate","server":"hexo server","clean":"hexo clean"},"dependencies":{"hexo":"^8.1.2","hexo-deployer-git":"^4.0.0","hexo-generator-archive":"^2.0.0","hexo-generator-category":"^2.0.0","hexo-generator-index":"^4.0.0","hexo-generator-searchdb":"^1.5.0","hexo-generator-tag":"^2.0.0","hexo-renderer-marked":"^7.0.1","hexo-renderer-pug":"^3.0.0","hexo-renderer-stylus":"^3.0.1","hexo-server":"^3.0.0","hexo-theme-butterfly":"^5.7.0","hexo-wordcount":"^6.0.1"},"hexo":{"version":"8.1.2"}}

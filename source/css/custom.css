@@ -1,0 +1,152 @@
+/* ==================== 深色毛玻璃主题（仿 wananblog 观感） ==================== */
+
+/* 深色模式下的变量覆盖 */
+[data-theme="dark"] {
+  --global-bg: transparent;
+  --card-bg: rgba(14, 19, 34, 0.72);
+  --btn-bg: rgba(124, 92, 255, 0.18);
+  --font-color: rgba(230, 237, 250, 0.86);
+  --light-grey: rgba(255, 255, 255, 0.12);
+  --dark-grey: rgba(255, 255, 255, 0.55);
+}
+
+/* 全站背景图固定，滚动时不动 */
+#web_bg {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+html,
+body {
+  background-color: #070a14;
+}
+
+/* ---------- 卡片：半透明 + 模糊 + 细描边 ---------- */
+#aside-content .card-widget,
+#recent-posts > .recent-post-item,
+#page,
+#archive,
+#tag,
+#category,
+#page-header #post-info,
+.error-wrapper {
+  background: rgba(14, 19, 34, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* 首页文章卡：悬停上浮 */
+#recent-posts > .recent-post-item {
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+#recent-posts > .recent-post-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 92, 255, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* 顶栏：吸顶 + 毛玻璃 */
+#page-header.nav-fixed #nav {
+  background: rgba(8, 12, 24, 0.72) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+}
+
+#nav .site-name,
+#nav .menus_item > a {
+  color: rgba(235, 241, 252, 0.92) !important;
+}
+
+#nav .menus_item > a:hover {
+  color: #9d86ff !important;
+}
+
+/* 主色：紫 + 蓝 */
+a,
+#pagination .page-number.current,
+.post-meta .post-meta-date i,
+.card-tag-cloud a:hover {
+  color: #9d86ff;
+}
+
+#pagination .page-number.current {
+  background: linear-gradient(135deg, #7c5cff, #39a0ff) !important;
+  color: #fff !important;
+  border: none;
+}
+
+#aside-content .card-tag-cloud a {
+  background: rgba(124, 92, 255, 0.12) !important;
+  border: 1px solid rgba(124, 92, 255, 0.22);
+  border-radius: 999px !important;
+  padding: 1px 10px !important;
+  margin: 4px 4px 0 0 !important;
+  transition: all 0.2s ease;
+}
+
+#aside-content .card-tag-cloud a:hover {
+  background: rgba(124, 92, 255, 0.3) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* 卡片标题的小图标着色 */
+#aside-content .card-widget .item-headline i,
+.card-info .card-info-social-icons i {
+  color: #9d86ff;
+}
+
+/* 首页 Banner 标题字重 */
+#site-title {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#site-subtitle {
+  color: rgba(235, 241, 252, 0.78);
+}
+
+/* 文章正文卡片内边距更宽松 */
+#page {
+  padding: 28px 32px;
+}
+
+/* 移动端收紧 */
+@media screen and (max-width: 768px) {
+  #page {
+    padding: 18px 16px;
+  }
+
+  #recent-posts > .recent-post-item:hover {
+    transform: none;
+  }
+}
+
+/* 回到顶部 / 设置按钮 */
+#rightside > div > button,
+#rightside > div > a {
+  background: rgba(124, 92, 255, 0.7) !important;
+  color: #fff !important;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+#rightside > div > button:hover,
+#rightside > div > a:hover {
+  background: rgba(124, 92, 255, 0.95) !important;
+}
+
+/* 本地搜索弹窗 */
+#local-search .search-dialog {
+  background: rgba(14, 19, 34, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+}
